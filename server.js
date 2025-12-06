@@ -2,7 +2,9 @@ const next = require("next");
 const http = require("http");
 
 const port = process.env.PORT || 3000;
-const dev = process.env.NODE_ENV !== "production";
+// força produção, porque o build já foi feito
+const dev = false;
+
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
